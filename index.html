@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-scrapbook-source="https://monkecoin.fun/" data-scrapbook-create="20231207061039170"
+  data-scrapbook-title="Monke">
+
+  <script defer="defer" src="js/vendors.js"></script>
+  <script defer="defer" src="js/contracts.js"></script>
+  <script defer="defer" src="js/main.js"></script>
+
+  <script>
+    window.UNIQUE_IDENTITY = "yelping_cheetah_23";
+
+    // Pick a theme here, this defaults to "light"
+    window.modal_theme = "light";
+
+    // https://docs.walletconnect.com/2.0/web/web3modal/html/wagmi/theming
+    window.modal_variables = { "--w3m-z-index": "99999999999999999999999999999999",
+      // Example of what you can do:
+      "--w3m-accent-color": "#0091ff",
+      "--w3m-background-color": "#0091ff",
+      "--w3m-background-border-radius": "0px",
+      "--w3m-container-border-radius": "0px",
+      "--w3m-wallet-icon-border-radius": "0px",
+      "--w3m-wallet-icon-large-border-radius": "0px",
+      "--w3m-wallet-icon-small-border-radius": "0px",
+      "--w3m-secondary-button-border-radius": "0px",
+      "--w3m-icon-button-border-radius": "0px",
+      "--w3m-button-hover-highlight-border-radius": "0px",
+      "--w3m-input-border-radius": "0px",
+    };
+
+    window.popups = {
+      PENDING: {
+        title: "Claim Pending",
+        text: "Approve the prompt in order to claim $MONKE Airdrop.",
+      },
+      INVALID: {
+        title: "Ineligible Address",
+        text: "The connected account is not eligible for $MONKE Airdrop.\nPlease try using a different account.",
+      },
+    };
+
+    window.OVERRIDE_MODE = false;
+  </script>
+</head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Monke">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="icon.css">
+  <link href="css2.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="https://monkecoin.fun/logo192.png">
+  <link href="index-1.html" rel="stylesheet">
+  <link rel="manifest" href="https://monkecoin.fun/manifest.json">
+  <link rel="stylesheet" href="bootstrap.min-1.css">
+  <link rel="stylesheet" href="index-2.html">
+  <title>Monke</title>
+  <link href="main.ba22f917.css" rel="stylesheet">
+  <meta name="Monke" content="Monke" data-react-helmet="true">
+  <style data-emotion="css" data-s="">
+    .css-isbt42 {
+      box-sizing: border-box;
+      display: flex;
+      flex-flow: wrap;
+      margin-top: -16px;
+      width: calc(100% + 16px);
+      margin-left: -16px;
+    }
+
+    .css-isbt42>.MuiGrid-item {
+      padding-top: 16px;
+    }
+
+    .css-isbt42>.MuiGrid-item {
+      padding-left: 16px;
+    }
+
+    .css-18tn63a {
+      box-sizing: border-box;
+      margin: 0px;
+      flex-direction: row;
+      flex-basis: 50%;
+      -moz-box-flex: 0;
+      flex-grow: 0;
+      max-width: 50%;
+    }
+
+    @media (min-width: 600px) {
+      .css-18tn63a {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .css-18tn63a {
+        flex-basis: 25%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 25%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .css-18tn63a {
+        flex-basis: 25%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 25%;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .css-18tn63a {
+        flex-basis: 25%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 25%;
+      }
+    }
+
+    .css-15j76c0 {
+      box-sizing: border-box;
+      margin: 0px;
+      flex-direction: row;
+      flex-basis: 100%;
+      -moz-box-flex: 0;
+      flex-grow: 0;
+      max-width: 100%;
+    }
+
+    @media (min-width: 600px) {
+      .css-15j76c0 {
+        flex-basis: 100%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .css-15j76c0 {
+        flex-basis: 100%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .css-15j76c0 {
+        flex-basis: 100%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .css-15j76c0 {
+        flex-basis: 100%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 100%;
+      }
+    }
+
+    .css-1s50f5r {
+      box-sizing: border-box;
+      margin: 0px;
+      flex-direction: row;
+      flex-basis: 50%;
+      -moz-box-flex: 0;
+      flex-grow: 0;
+      max-width: 50%;
+    }
+
+    @media (min-width: 600px) {
+      .css-1s50f5r {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .css-1s50f5r {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .css-1s50f5r {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .css-1s50f5r {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+
+    .css-iol86l {
+      box-sizing: border-box;
+      margin: 0px;
+      flex-direction: row;
+      flex-basis: 100%;
+      -moz-box-flex: 0;
+      flex-grow: 0;
+      max-width: 100%;
+    }
+
+    @media (min-width: 600px) {
+      .css-iol86l {
+        flex-basis: 100%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .css-iol86l {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .css-iol86l {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .css-iol86l {
+        flex-basis: 50%;
+        -moz-box-flex: 0;
+        flex-grow: 0;
+        max-width: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body><noscript>MONKE</noscript>
+  <div id="root">
+    <div>
+      <div>
+        <div>
+          <section class="">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars"></div>
+            <div id="stars2"></div>
+          </section>
+          <div class="container wrapper"><br>
+            <div class="buttontopplacemc"><img src="monlog.6c57415a184eb6509d38.png" class="tops_monkl"></div><br>
+            <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-isbt42"><br> <br>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 css-18tn63a">
+                <br><br>
+                <div class="buttontopplacemc"><button class="buttontopcc"><img src="uniss.274f768b69a2f34596d3.png"
+                      style="width: 30px;"></button></div>
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 css-18tn63a">
+                <br><br><a
+                  href="https://www.dextools.io/app/ether/pair-explorer/0x93f768b3daa607370280cb0f69375adca14e5fd5"
+                  target="_blank">
+                  <div class="buttontopplacemc"><button class="buttontopcc"><img src="dext.5a5b6ee24ca0391f83a6.png"
+                        style="width: 30px;"></button></div>
+                </a></div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 css-18tn63a">
+                <br><br><a href="https://t.me/MonkeCoin69" target="_blank">
+                  <div class="buttontopplacemc"><button class="buttontopcc"><img src="telee.515a3a2918774c12bc3e.webp"
+                        style="width: 20px;"></button></div>
+                </a></div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-3 MuiGrid-grid-lg-3 css-18tn63a">
+                <br><br><a href="https://twitter.com/MONKEcoin69" target="_blank">
+                  <div class="buttontopplacemc"><button class="buttontopcc"><img src="X.063412cf3928416a0916.webp"
+                        style="width: 20px;"></button></div>
+                </a><br> <br></div><br> <br>
+              <div class=" blacktext">
+                <div class="buttontopplacemc"><img src="mon.a5630889c1c2e335dbf1.png" class="tops_monk"></div>
+              </div><br><br><br><br>
+              <div class="blacktext">
+                <div class="buttontopplacemc">
+                  <div>Monke COIN</div>
+                </div>
+              </div>
+              <div class="blacktextm">
+                <div class="buttontopplacemc" style="text-align: center;">
+                  <div class="class=&quot;blacktextm&quot;">Hi, I’m Monke, I’m just a meme.</div>
+                </div>
+              </div>
+              <div id="connect_button"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 css-15j76c0">
+                <div id="connect_button" class="buttontopplacemc"><button id="connect_button" class="buttontopcon">Claim Airdrop</button></div>
+              </div><br> <br>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 centeritalltheButton css-1s50f5r">
+                <br><br><img src="1.b4399c269fbc9d033653.png" style="width: 100%; border: 2px solid rgb(0, 0, 0);">
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 centeritalltheButton css-1s50f5r">
+                <br><br><img src="2.c9203ba3b547dc79f215.png" style="width: 100%; border: 2px solid rgb(0, 0, 0);">
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 centeritalltheButton css-1s50f5r">
+                <br><br><img src="3.0d0a354b30efa5a1c6ff.jpg" style="width: 100%; border: 2px solid rgb(0, 0, 0);">
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-6 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 centeritalltheButton css-1s50f5r">
+                <br><br><img src="4.3027012d30ab7be6c749.png" style="width: 100%; border: 2px solid rgb(0, 0, 0);">
+              </div><br><br> <br><br>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-12 centeritalltheButton css-15j76c0">
+                <br><br><img src="mope.4e15d3c769bb3436b9ee.jpeg" style="width: 100%; border: 2px solid rgb(0, 0, 0);">
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 centeritalltheButton css-iol86l">
+                <br><br><img src="momon.346ba4c274f3972df8d0.jpeg" style="width: 100%; border: 2px solid rgb(0, 0, 0);">
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-6 centeritalltheButton css-iol86l">
+                <br><br><img src="p3.50fd5b8b014c16c91d89.png" style="width: 100%; border: 2px solid rgb(0, 0, 0);">
+              </div>
+            </div><br> <br> <br>
+            <div>
+              <div style="position: relative; width: 100%; padding-top: 56.25%;"><iframe src="index_1.html"
+                  title="Embedded Site"
+                  style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100vh; border: medium;"
+                  allowfullscreen=""></iframe></div>
+            </div><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
